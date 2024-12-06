@@ -1,0 +1,47 @@
+@use "../bases/variables" as vars;
+
+.formulario-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border: 2px solid #000;
+    padding: vars.$padding-secundario;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: vars.$color-blanco;
+
+
+    .borde {
+        display: contents;
+    }
+
+    .form-group {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        grid-column: span 2;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: $margin-base;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}

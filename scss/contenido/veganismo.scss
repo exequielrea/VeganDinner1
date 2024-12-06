@@ -1,0 +1,85 @@
+@use "../bases/variables" as vars;
+
+//beneficios
+.beneficios-veganismo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: vars.$padding-secundario;
+  text-align: left;
+
+  .titulos {
+    font-size: 2rem;
+    color: vars.$color-primario;
+    margin-bottom: 15px;
+  }
+
+  li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: vars.$color-letra;
+    margin: 10px 0;
+
+    &:before {
+      margin-right: 10px;
+      color: vars.$color-primario;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: vars.$color-letra;
+    max-width: 800px;
+    margin: 10px auto;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+// veganismo
+
+.contenido-veganismo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: vars.$padding-secundario;
+  text-align: center;
+
+  .titulos {
+    font-size: 2rem;
+    color: vars.$color-primario;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: vars.$color-letra;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
